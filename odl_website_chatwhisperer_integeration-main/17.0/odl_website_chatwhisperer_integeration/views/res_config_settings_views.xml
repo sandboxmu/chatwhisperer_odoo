@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <odoo>
+      <data>
+        <record id="res_cosfig_settings_chatbot_iframe_form_view" model="ir.ui.view">
+            <field name="name">res.config.settings.chatbot.iframe.form.view</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="priority" eval="80"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <app data-string="Chat Bot Settings" string="Chat Bot Settings" name="chat_bot_settings" logo="/odl_website_chatwhisperer_integeration/static/description/chatbot.png">
+
+                        <div id="chatbot_settings">
+                            <block title="Website ChatBot Inegeration" name="chatbot_setting_container">
+                                <setting id="chatbot_iframe_setting">
+                                  <span class="o_form_label" >
+                                        Chat Bot Iframe
+                                  </span>
+                                  <br/>
+                                  <field name="chatbot_iframe" nolabel="1" class="w-auto ps-1 fw-bold"/>
+                                    
+                                </setting>
+                                
+                            </block>
+                        </div>
+
+                      
+                    </app>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+  </odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <odoo>
+    <template id="chatbotbanner"  name="Chat Bot Banner" inherit_id="website.layout" active="True">
+        <xpath expr="//body" position="inside">
+          <t t-set="iframe_record" t-value="request.env['ir.config_parameter'].sudo().get_param('odl_website_chatwhisperer_integeration.chatbot_iframe')"/>
+          <t t-if="iframe_record">
+            <t t-raw="iframe_record"/>
+          </t>
+        </xpath>
+  
+    </template>
+      
+  </odoo>
