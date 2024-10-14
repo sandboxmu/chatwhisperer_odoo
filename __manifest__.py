@@ -5,8 +5,8 @@
     'summary': """ChatWhisperer Website Integeration
     Get your chatbot Iframe from https://bot.chatwhisperer.ai/dashboard/chatbot and add it in Chatbot settings for smooth chatbot integeration
     """,
-    'author': 'Odolution',
-    'website': 'www.odolution.com',
+    'author': 'sandbox',
+    'website': 'sandbox.mu',
     'category': 'Technical',
     'depends': ['base', 'website'],
     "data": [
