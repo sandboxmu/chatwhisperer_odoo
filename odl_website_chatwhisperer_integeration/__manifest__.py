@@ -6,7 +6,7 @@
     Get your chatbot Iframe from https://bot.chatwhisperer.ai/dashboard/chatbot and add it in Chatbot settings for smooth chatbot integeration
     """,
     'author': 'sandbox',
-    'website': 'sandbox.mu',
+    'website': 'https://chatwhisperer.ai/',
     'category': 'Technical',
     'depends': ['base', 'website'],
     "data": [
