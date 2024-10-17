@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'ChatWhisperer Website Integeration',
-    'version': '18.0.1.0',
+    'name': 'Chat Whisperer - Website Ai Chatbot',
+    'version': '18.0.1.2',
     'summary': """ChatWhisperer Website integeration
     Get your chatbot Iframe from https://bot.chatwhisperer.ai/dashboard/chatbot and add it in Chatbot settings for smooth chatbot integeration
     """,
