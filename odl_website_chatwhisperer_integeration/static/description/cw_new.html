@@ -4,8 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat whisperer</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #6f42c1, #e6e6fa);
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #6f42c1, #e6e6fa); /* Dark to light purple */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .container {
+            width: 90%;
+            margin: 30px auto;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 10px;
+            flex-wrap:wrap;
+        }
+        .tabs button {
+            background-color: #6f42c1; /* Dark purple */
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .tabs button:hover {
+            background-color: #d8bfd8; /* Lighter purple on hover */
+        }
+        .tabs button.active {
+            background-color: #d8bfd8; /* Light purple */
+            border-bottom: 3px solid #6f42c1; /* Dark purple bottom border */
+        }
+        .tab-content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .tab-content h2 {
+            color: #6f42c1; /* Dark purple */
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .tab-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .tab-content ul li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid #6f42c1; /* Dark purple border */
+        }
+        .highlight {
+            background: #e6e6fa; /* Light purple background */
+            border-left: 5px solid #6f42c1;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .highlight h3 {
+            margin: 0;
+            font-size: 1.4em;
+        }
+        .tab-content img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6f42c1; /* Dark purple */
+            color: #fff;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .list-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list {
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+        .content-box {
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #6a1b9a;
+        }
+
+        .content-box h3 {
+            color: #6a1b9a;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .content-box p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .container .main_img{
+            width: 100%;
+
+        }
+        .tab-content img{
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -21,37 +158,17 @@
         <br/>
         <br/>
         <br/>
-        <div class="tabs-container">
-        <div style="margin: 0 auto; text-align: center;">
-            <!-- Radio buttons for each tab -->
-        <input type="radio" id="tab1" name="tab" checked>
-        <label for="tab1">Description</label>
-
-        <input type="radio" id="tab2" name="tab">
-        <label for="tab2">Features</label>
-
-        <input type="radio" id="tab3" name="tab">
-        <label for="tab3">FAQ</label>
-
-        <input type="radio" id="tab4" name="tab">
-        <label for="tab4">License</label>
-
-        <input type="radio" id="tab5" name="tab">
-        <label for="tab5">Screenshots</label>
-        <!-- </div> -->
-
         <!-- Tabs -->
-
-        <!-- <div class="tabs">
+        <div class="tabs">
             <button class="tablink active" onclick="openTab(event, 'Description')">Description</button>
             <button class="tablink" onclick="openTab(event, 'Features')">Features</button>
             <button class="tablink" onclick="openTab(event, 'FAQ')">FAQ</button>
             <button class="tablink" onclick="openTab(event, 'License')">License</button>
             <button class="tablink" onclick="openTab(event, 'Screenshot')">Screenshot</button>
-        </div> -->
+        </div>
 
         <!-- Tab Content -->
-        <div id="description" class="tab-content">
+        <div id="Description" class="tab-content">
             
             <h2 style="text-align:center;">Description</h2>
             <h3 class="highlight" style="color:#6f42c1; text-align:center; font-size:larger;">
@@ -93,7 +210,7 @@
             <!-- <img src="/saif/odolution/custom_modules/Banner Image/1200x1200.jpg" alt="ChatbotImage"> -->
         </div>
 
-        <div id="features" class="tab-content" >
+        <div id="Features" class="tab-content" style="display:none">
             <h2>Key Features</h2>
             <div class="list-container">
                 <div class="list">
@@ -114,9 +231,9 @@
                 </div>
             </div>
             <p><strong>Conclusion:</strong> Enhance your website with WordPress AI GPT Chatbot integration to improve customer experience and drive better results.</p>
-            <!-- <br/> -->
-            <!-- <br/> -->
-            <!-- <br/> -->
+            <br/>
+            <br/>
+            <br/>
             <div class="content-box">
             <h3 style="text-align: center; font: size 50%;">
                 <strong>Understanding the Basics of AI GPT Chatbots for WordPress</strong>
@@ -199,7 +316,7 @@
             <h3 style="text-align: center; font: size 50%;">
                 <strong>Maximizing the Impact of AI GPT Chatbots on User Engagement</strong>
             </h3>
-            <p >
+            <p>
                 Integrating AI GPT Chatbots into your WordPress site can significantly impact user engagement and improve the overall customer experience. 
                 
                 Let’s explore some key aspects of maximizing the impact of AI GPT Chatbots:
@@ -283,9 +400,9 @@
             <!-- <img src="/saif/odolution/custom_modules/Banner Image/1200x960.jpg" alt="Chatbot Features Image"> -->
         </div>
 
-        <div id="faq" class="tab-content" >
+        <div id="FAQ" class="tab-content" style="display:none">
             <h2>Frequently Asked Questions (FAQ)</h2>
-            <ul style="text-align:left;">
+            <ul>
                 <li><strong>Q:</strong> What is an AI-powered chatbot?<br><strong>A:</strong> An AI chatbot uses artificial intelligence to simulate human conversation, allowing it to answer customer queries, guide users, and perform automated tasks.</li>
                 <li><strong>Q:</strong> Can I customize the chatbot for my business?<br><strong>A:</strong> Yes! Our chatbot is fully customizable to match your brand and specific business requirements.</li>
                 <li><strong>Q:</strong> Is customer data secure?<br><strong>A:</strong> Absolutely. Our platform follows the highest security standards to ensure all user data is encrypted and protected.</li>
@@ -293,16 +410,14 @@
             <img src="1200x960.jpg" alt="FAQ Image">
         </div>
 
-        <div id="license" class="tab-content" >
+        <div id="License" class="tab-content" style="display:none">
             <h2>License</h2>
-            <!-- <div class="content-box"> -->
-                <p class="content-box">Our chatbot platform is provided under a flexible licensing model. Please review the terms and conditions of the license before deploying the chatbot for commercial use.</p>
-                <p class="content-box">The license allows businesses to customize the chatbot, integrate it with their existing systems, and use it across multiple platforms. However, unauthorized distribution or resale of the product is strictly prohibited.</p>
-            <!-- </div> -->
+            <p>Our chatbot platform is provided under a flexible licensing model. Please review the terms and conditions of the license before deploying the chatbot for commercial use.</p>
+            <p>The license allows businesses to customize the chatbot, integrate it with their existing systems, and use it across multiple platforms. However, unauthorized distribution or resale of the product is strictly prohibited.</p>
             <img src="1200x1200.jpg" alt="License Image">
         </div>
 
-        <div id="screenshot" class="tab-content" >
+        <div id="Screenshot" class="tab-content" style="display:none">
             <h2>Screenshot</h2>
             <div style="display:flex;flex-direction: column;gap: 50px;">
                 <img src="Screenshot 2024-10-15 183213.png" alt="">
@@ -312,14 +427,33 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
 
     <footer>
         <p>&copy; 2024 Sanbox | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
 
-    <!-- <script src="script.js"></script> -->
+    <script>
+        // Function to open a specific tab
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablink;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove active class from all tablinks
+            tablink = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablink.length; i++) {
+                tablink[i].className = tablink[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 
 </body>
 </html>
